@@ -1,0 +1,28 @@
+﻿@using BlogPessoal.Web.Models
+@model IEnumerable<CategoriaDeArtigo>
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Categorias de Artigo</h2>
+<div>
+    @Html.ActionLink("Novo","Create")
+</div>
+<table class="table">
+    <tr>
+        <th>
+            Nome
+        </th>
+        <th>
+            Descrição
+        </th>
+    </tr>
+
+    @foreach(var item in Model)
+     {
+        <tr>
+            <td>@item.Nome</td>
+            <td>@item.Descricao</td>
+        </tr>
+     }
+</table>
