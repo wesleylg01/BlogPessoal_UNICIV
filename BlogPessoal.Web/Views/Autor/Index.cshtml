@@ -1,5 +1,5 @@
 ﻿@using BlogPessoal.Web.Models
-@model IEnumerable<CategoriaDeArtigo>
+@model IEnumerable<Autor>
 @{
     ViewBag.Title = "Index";
 }
@@ -11,10 +11,13 @@
 <table class="table">
     <tr>
         <th>
-            Nome
+            Autor
         </th>
         <th>
-            Descrição
+            Email
+        </th>
+        <th>
+            Data Criação
         </th>
     </tr>
 
@@ -22,7 +25,8 @@
     {
         <tr>
             <td>@item.Nome</td>
-            <td>@item.Descricao</td>
+            <td>@item.Email</td>
+            <td>@item.Data_Cadastro</td>
         </tr>
     }
 </table>
