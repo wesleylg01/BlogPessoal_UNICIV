@@ -91,7 +91,7 @@ namespace BlogPessoal.Web.Controllers
                 return View(autor);
             }
         }
-
+        [HttpPost]
         public ActionResult Delete(int id)
         {
             var autor = _ctx.Autor.Find(id);

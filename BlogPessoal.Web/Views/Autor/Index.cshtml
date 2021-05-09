@@ -23,10 +23,17 @@
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>@item.Nome</td>
-            <td>@item.Email</td>
-            <td>@item.Data_Cadastro</td>
-        </tr>
+    <tr>
+        <td>@item.Nome</td>
+        <td>@item.Email</td>
+        <td>@item.Data_Cadastro</td>
+        <td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+            @Html.ActionLink("Excluir", "Delete", new { id = item.Id })
+        </td>
+        </td>
+    </tr>
+
     }
 </table>

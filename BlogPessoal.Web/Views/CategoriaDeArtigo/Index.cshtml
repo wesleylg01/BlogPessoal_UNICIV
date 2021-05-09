@@ -16,13 +16,20 @@
         <th>
             Descrição
         </th>
+        <th>
+            Opções
+        </th>
     </tr>
 
     @foreach (var item in Model)
     {
-        <tr>
-            <td>@item.Nome</td>
-            <td>@item.Descricao</td>
-        </tr>
+<tr>
+    <td>@item.Nome</td>
+    <td>@item.Descricao</td>
+    <td>
+        @Html.ActionLink("Editar", "Edit", new { id = item.Id })
+        @Html.ActionLink("Excluir", "Delete", new { id = item.Id })
+    </td>
+</tr>
     }
 </table>

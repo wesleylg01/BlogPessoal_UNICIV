@@ -91,7 +91,7 @@ namespace BlogPessoal.Web.Controllers
                 return View(categoria);
             }
         }
-
+        [HttpPost]
         public ActionResult Delete (int id)
         {
             var categoria = _ctx.CategoriaDeArtigo.Find(id);
