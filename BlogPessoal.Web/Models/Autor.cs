@@ -15,5 +15,7 @@ namespace BlogPessoal.Web.Models
         public string Senha { get; set; }
         public bool Administrador { get; set; }
         public DateTime Data_Cadastro{ get; set; }
+
+        public virtual ICollection<Artigo> Artigos { get; set; }
     }
 }
