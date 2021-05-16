@@ -7,21 +7,25 @@ using System.Net;
 using System.Web;
 using System.Web.Mvc;
 using BlogPessoal.Web.Data.Contexto;
+using BlogPessoal.Web.Filtros;
 using BlogPessoal.Web.Models;
 
 namespace BlogPessoal.Web.Controllers
 {
+    [Authorize]
     public class ArtigosController : Controller
     {
         private BlogPessoalContexto db = new BlogPessoalContexto();
 
+        [AllowAnonymous]
         // GET: Artigos
         public ActionResult Index()
         {
             var artigos = db.Artigos.Include(a => a.Autor).Include(a => a.CategoriaDeArtigo);
             return View(artigos.ToList());
         }
-
+        [AllowAnonymous]
+        [ExibirArtigosActionFilter]
         // GET: Artigos/Details/5
         public ActionResult Details(int? id)
         {

@@ -1,11 +1,28 @@
-﻿@model BlogPessoal.Web.Models.Artigo
+﻿@using BlogPessoal.Web.Models
+@model BlogPessoal.Web.Models.Artigo
 
 @{
     ViewBag.Title = "Details";
 }
 
 <h2>Details</h2>
+<h4>
+    @{ 
+        List<Artigo> artigos = ViewBag.Artigos;
+            if (artigos.Any())
+            {
+                <ul>
+                    @foreach (var artigo in artigos)
+                    {
+                        <li>
+                            @artigo.Titulo;
+                        </li>
+                    }
 
+                </ul>
+            }
+    }
+</h4>
 <div>
     <h4>Artigo</h4>
     <hr />

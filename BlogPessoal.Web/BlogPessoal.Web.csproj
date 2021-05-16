@@ -198,6 +198,7 @@
     <Compile Include="Data\Mapeamento\ArtigoMap.cs" />
     <Compile Include="Data\Mapeamento\AutorMap.cs" />
     <Compile Include="Data\Mapeamento\CategoriaDeArtigoMap.cs" />
+    <Compile Include="Filtros\ExibirArtigosActionFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
