@@ -71,6 +71,7 @@ namespace BlogPessoal.Web.Controllers
                 return RedirectToAction("Index");
             }
             return View(autor);
+
         }
 
         public ActionResult Delete(int? id)
